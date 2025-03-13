@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    {% comment %} bootstrap {% endcomment %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    {% comment %} css {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+<body>
+    <header class="header sticky-top">
+        <div class="header-container d-flex">
+            <navbar class="header-nav pt-4">
+                <ul class="header-list d-flex">
+                    <li>
+                        <a href="/" class="nav-a m-3">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/shop" class="nav-a m-3">Магазин</a>
+                    </li>
+                </ul>
+            </navbar>
+            <div class="header-logo">
+                <a href="/"><img src="{% static 'img/Logo.png' %}" alt="" class="russian-logo"></a>
+            </div>
+            <div class="header-profile pt-2">
+                <div class="matreshka-container">
+                    <a href="{% url 'cart:cart_detail' %}"><img src="{% static 'img/matreshka.jpg' %}" class="matreshka" alt="Корзина"></a>
+                    <p class="cart-quantity">
+                        {% with cart_quantity=cart|length %}
+                            {% if cart_quantity > 0 %}
+                                {{ cart_quantity }}
+                            {% else %}
+                                0
+                            {% endif %}
+                        {% endwith %}
+                    </p>
+                </div>
+                {% if request.user.is_authenticated %}
+                    <a href="{% url "users:profile" %}" class="m-2">Профиль</a>
+                    <a href="{% url "users:logout" %}" class="m-2">Выйти</a>
+                {% else %}
+                    <a href="{% url "users:login" %}" class="m-2">Авторизация</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+
+
+    {% comment %} js 4 bootstrap {% endcomment %}
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+
+:root {
+    --box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.363);
+}
+
+body {
+    font-family: "Monomakh", serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.header-container {
+    box-sizing: border-box;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
+    }
+
+.header {
+    height: 80px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.header-list {
+    text-transform: uppercase;
+    margin-top: -8px;
+}
+
+.header-profile {
+    display: flex; 
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative; /* Для позиционирования */
+    text-transform: uppercase;
+    height: 100%; /* Ограничиваем высоту внутри шапки */
+    max-height: 80px; /* Соответствует высоте header */
+}
+
+.header-profile .matreshka-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    max-height: 70px; 
+}
+
+.header-profile .cart_quantity {
+    margin-top: -2px;
+    margin-left: 0; 
+    font-size: 14px; 
+    line-height: 1; 
+    padding: 0; 
+    margin-bottom: 0px; 
+    margin-right: 35px;
+}
+
+.header-profile a.Login {
+    margin-left: 0; 
+}
+
+.header-logo {
+    position: relative; /* Родительский контейнер для абсолютного позиционирования лого */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: -16px;
+}
+
+.russian-logo {
+    width: 550px;
+    height: auto;
+    display: block;
+    margin-left: -20px; 
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+.home {
+    align-items: center;
+}
+
+.home-title {
+    margin-top: 210px;
+    margin-bottom: 50px;
+}
+
+.home-card {
+    width: 200px;
+    height: 325px;
+    border: 1px solid #00000027;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box; /* Учитываем padding в общей высоте */
+}
+
+.home-card:hover {
+    border: 1px solid black; /* Рамка меняется при наведении */
+}
+
+.title-card {
+    max-width: 185px;
+    min-height: 70px; /* Ограничиваем высоту названия */
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.card-img {
+    width: 195px;
+    height: 195px;
+    }
+
+.price {
+    font-size: 18px; /* Уменьшаем размер для товаров без скидок */
+    font-weight: 700;
+    margin: 0;
+    margin-top: 5px;
+    text-align: center;
+    }
+
+.home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #00000027;
+    border-radius: 5px;
+    background-image: url(../img/button.png);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.home-btn:hover {
+    border: 1px solid black;
+}
+
+.logoinfo {
+    position: absolute;
+    top: 6%;
+    left: 41%;
+    width: auto;
+    height: 260px;
+    margin-top: 30px;
+}
+
+.subtitlee {
+    position: absolute;
+    bottom: 0%;
+    left: 47%;
+    width: auto;
+    height: 80px;
+    opacity: 0.8;
+
+}
+
+.detail-image {
+    width: 650px;
+    height: 650px;
+}
+
+.detail-product {
+    margin-top: 80px;
+}
+
+.detail-description {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.detail-description p {
+    margin-top: 30px;
+    max-width: 700px;
+}
+
+.detail-description h2 span {
+    font-size: 56px;
+}
+
+.cart-discount {
+    margin-top: -10px;
+    font-weight: 600;
+}
+
+.cart-discount .price {
+    font-size: 16px; /* Уменьшаем размер новой цены */
+    font-weight: 700;
+    margin: 0;
+    margin-top: 2px; /* Минимальный отступ между ценами */
+}
+
+.cart-discount .line {
+    opacity: 0.7;
+    text-decoration: line-through;
+    font-weight: 300;
+    margin: 0;
+    font-size: 14px; /* Уменьшаем размер зачеркнутой цены */
+}
+
+.cart-quantity {
+    position: absolute;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid black;
+    text-align: center;
+    margin-left: 20px;
+    padding-top: -40px;
+}
+
+.line {
+    opacity: 0.7;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+.cart-btn {
+    width: 180px;
+    height: 50px;
+    border: 1px solid #00000027;
+    border-radius: 5px;
+    background-image: url(../img/button.png);
+    transition: all 0.4s ease;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+.matreshka {
+    max-width: 35px; 
+    height: auto; 
+    margin-top: 0px;
+    margin-right: 35px; /* Увеличиваем отступ справа, чтобы сдвинуть левее относительно Login */
+}
+
+.cart-btn:hover {
+    border: 1px solid black;
+}
+
+.main {
+    margin: 0 auto; /* Центрируем относительно контейнера */
+    max-width: 1300px; 
+}
+
+.main-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 10px; /*65*/
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1300px;
+    justify-content: center; /* Центрируем сетку */
+    justify-items: center;
+    column-gap: 20px; /* Увеличиваем расстояние между колонками */
+    row-gap: 20px; /* Увеличиваем расстояние между строками */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 20px 0; /* Добавляем вертикальные отступы */
+    margin-bottom: 10px; /* Добавляем нижний отступ, чтобы пагинация не прилипала */
+}
+
+.sidebar {
+    margin-top: 10px;/* Уменьшено с 70px */
+    }
+
+.llist {
+    display: flex; /* Используем Flexbox для выравнивания sidebar и main */
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar ul li {
+    font-size: 20px;
+    width: 165px;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.sidebar ul li a {
+    margin-left: 15px;
+    width: 165px;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.selected {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-image: url(../img/button.png);
+}
+
+.pagination {
+    display: flex;
+    position: static;
+    /* position: absolute; */
+    /* bottom: 0%;
+    left: 46%; */
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.disabled {
+    opacity: 0.2;
+}
+
+.cart {
+    flex-direction: column;
+}
+
+.cart-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.cart-cards {
+    max-height: 52vh;
+    width: 600px;
+    overflow-y: auto;
+}
+
+.cart-card {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 570px;
+    height: 150px;
+    border: 1px solid #00000042;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-image: url(../img/frame.png);
+    background-repeat: no-repeat;
+}
+
+.cart-card-img img {
+    width: 125px;
+    height: 125px;
+    border: 1px solid #00000042;
+}
+
+.card-card-name {
+    width: 180px;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #00000042;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.5s ease;
+}
+
+.cart-btn:hover {
+    border: 1px solid black ;
+}
+
+.cart-price {
+    font-size: 16px;
+}
+
+.opac {
+    opacity: 0,5;
+    margin: 0;
+}
+
+.cart-total-price-ots {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.cart-total-price {
+    margin: 0;
+}
+
+.total {
+    margin: 50px 0 25px 0;
+}
+
+.cart-form {
+    margin-top: 25px;
+}
+
+.add-to-cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #00000042;
+    border-radius: 5px;
+    margin: 0;
+    transition: all 0.5s ease;
+    background-image: url(../img/button.png);
+    margin-top: 25px;
+}
+
+.add-to-cart-btn:hover {
+    border: 1px solid black;
+}
