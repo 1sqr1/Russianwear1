@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'russianwear',
         'USER': 'russianwear',
         'PASSWORD': 'russianwear',
-        'HOST': 'localhost',
+        'HOST': 'russianwear.onrender.com',
         'PORT': '5432',
     }
 }
