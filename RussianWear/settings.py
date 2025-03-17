@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-te0=_tz^+n*)yvg48f44ff^7xh059v4jpa((5!cu+96u%bn)0j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['russianwear.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'russianwear',
         'USER': 'russianwear',
         'PASSWORD': 'russianwear',
-        'HOST': 'russianwear.onrender.com',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
